@@ -1,0 +1,25 @@
+[
+  {
+    "Timer": 6,
+    "Prescription": {
+      "PatientId": 1,
+      "Medicine": {
+        "Name": "Ibuprofen",
+        "Ingredients": [
+          "a",
+          "b",
+          "c"
+        ],
+        "Price": 20,
+        "Quantity": 13,
+        "LastRestocked": "30.05.2023.",
+        "RestockingQuantity": 10
+      },
+      "Days": 5,
+      "Schedule": "1x24",
+      "Meals": "before meal",
+      "Date": "27.05.2023.",
+      "WasUsed": true
+    }
+  }
+]

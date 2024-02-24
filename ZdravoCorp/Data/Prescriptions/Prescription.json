@@ -1,0 +1,62 @@
+[
+  {
+    "PatientId": 1,
+    "Medicine": {
+      "Name": "Ibuprofen",
+      "Ingredients": [
+        "a",
+        "b",
+        "c"
+      ],
+      "Price": 20,
+      "Quantity": 1013,
+      "LastRestocked": "07.09.2023.",
+      "RestockingQuantity": 10
+    },
+    "Days": 5,
+    "Schedule": "1x3",
+    "Meals": "before meal",
+    "Date": "27.05.2023.",
+    "WasUsed": true
+  },
+  {
+    "PatientId": 2,
+    "Medicine": {
+      "Name": "Ibuprofen",
+      "Ingredients": [
+        "a",
+        "b",
+        "c"
+      ],
+      "Price": 20,
+      "Quantity": 1013,
+      "LastRestocked": "07.09.2023.",
+      "RestockingQuantity": 10
+    },
+    "Days": 5,
+    "Schedule": "1x2",
+    "Meals": "after meal",
+    "Date": "29.05.2023.",
+    "WasUsed": false
+  },
+  {
+    "PatientId": 1,
+    "Medicine": {
+      "Name": "Penicilin",
+      "Ingredients": [
+        "a",
+        "b",
+        "c"
+      ],
+      "Price": 30,
+      "Quantity": 1040,
+      "LastRestocked": "07.09.2023.",
+      "RestockingQuantity": 10
+    },
+    "Days": 2,
+    "Schedule": "2x3",
+    "Meals": "after meal",
+    "Date": "31.05.2023.",
+    "WasUsed": false
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "TreatmentId": 123,
+    "PatientId": 2,
+    "DoctorId": 1,
+    "Days": 0,
+    "Therapy": "mm",
+    "AdditionalExams": "b",
+    "StartDate": "16.06.2023.",
+    "EndDate": "16.06.2023.",
+    "TreatmentEnded": true,
+    "TreatmentStarted": true,
+    "RoomId": 5
+  },
+  {
+    "TreatmentId": 1234,
+    "PatientId": 1,
+    "DoctorId": 1,
+    "Days": 3,
+    "Therapy": "a",
+    "AdditionalExams": "b",
+    "StartDate": "12.06.2023.",
+    "EndDate": "15.06.2023.",
+    "TreatmentEnded": true,
+    "TreatmentStarted": true,
+    "RoomId": 5
+  }
+]

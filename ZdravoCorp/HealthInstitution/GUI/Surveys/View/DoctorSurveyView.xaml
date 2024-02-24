@@ -1,0 +1,51 @@
+﻿<Window x:Class="ZdravoCorp.HealthInstitution.GUI.PatientWindows.DoctorSurveyView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.HealthInstitution.GUI.PatientWindows"
+        mc:Ignorable="d"
+        Title="Doctor survey" Height="480" Width="400" Background="#625750">
+    <Border Height="400" Width="290" Grid.Column="1">
+        <StackPanel  Height="400" Width="290" Background="#c6bcb6">
+            <WrapPanel  HorizontalAlignment="Center">
+                <Label Content="{Binding TitleLabel}" Margin="0 5 0 5" Name="docIdTitle"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Username"  Margin="15 5 5 5" ></Label>
+                <TextBox Name="usernameBox" Text="{Binding Username}" IsEnabled="False" Width="120" Margin="48 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Name"  Margin="15 5 5 5"></Label>
+                <TextBox Name="nameBox" Text="{Binding Name}" IsEnabled="False" Width="120" Margin="70 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Surname"  Margin="15 5 5 5"></Label>
+                <TextBox Name="surnameBox" Text="{Binding Surname}" IsEnabled="False" Width="120" Margin="56 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Speciality"  Margin="15 5 5 5"></Label>
+                <TextBox Name="specBox" Text="{Binding Speciality}" IsEnabled="False" Width="120" Margin="53 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <Label Name="q1" Content="{Binding Question1}"  Margin="15 0 0 0"></Label>
+            <WrapPanel HorizontalAlignment="Center">
+                <RadioButton Content="1" IsChecked="{Binding IsCheckedQ1R1}" FontSize="13" Margin="0, 0,20,0" Name="q1rating1" Background="#e0e2e4" VerticalContentAlignment="Center" ></RadioButton>
+                <RadioButton Content="2" IsChecked="{Binding IsCheckedQ1R2}" FontSize="13" Margin="0, 0, 20, 0" Name="q1rating2" Background="#e0e2e4"  VerticalContentAlignment="Center"/>
+                <RadioButton Content="3" IsChecked="{Binding IsCheckedQ1R3}" FontSize="13" Margin="0, 0, 20, 0" Name="q1rating3" Background="#e0e2e4" VerticalContentAlignment="Center"></RadioButton>
+                <RadioButton Content="4" IsChecked="{Binding IsCheckedQ1R4}" FontSize="13" Margin="0, 0, 20, 0" Name="q1rating4" Background="#e0e2e4" VerticalContentAlignment="Center"></RadioButton>
+                <RadioButton Content="5" IsChecked="{Binding IsCheckedQ1R5}" FontSize="13" Margin="0, 0, 20, 0" Name="q1rating5" Background="#e0e2e4" VerticalContentAlignment="Center"></RadioButton>
+            </WrapPanel>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Question2}" Name="q2" Margin="15 5 0 0" Width="265" ></TextBlock>
+            <WrapPanel HorizontalAlignment="Center">
+                <RadioButton Content="1" IsChecked="{Binding IsCheckedQ2R1}" FontSize="13" Margin="0, 5,20,0" Name="q2rating1" Background="#e0e2e4" VerticalContentAlignment="Center" ></RadioButton>
+                <RadioButton Content="2" IsChecked="{Binding IsCheckedQ2R2}" FontSize="13" Margin="0, 5, 20, 0" Name="q2rating2" Background="#e0e2e4"  VerticalContentAlignment="Center"/>
+                <RadioButton Content="3" IsChecked="{Binding IsCheckedQ2R3}" FontSize="13" Margin="0, 5, 20, 0" Name="q2rating3" Background="#e0e2e4" VerticalContentAlignment="Center"></RadioButton>
+                <RadioButton Content="4" IsChecked="{Binding IsCheckedQ2R4}" FontSize="13" Margin="0, 5, 20, 0" Name="q2rating4" Background="#e0e2e4" VerticalContentAlignment="Center"></RadioButton>
+                <RadioButton Content="5" IsChecked="{Binding IsCheckedQ2R5}" FontSize="13" Margin="0, 5, 20, 0" Name="q2rating5" Background="#e0e2e4" VerticalContentAlignment="Center"></RadioButton>
+            </WrapPanel>
+            <Label Margin="15 5 5 0" Content="Comment (not required): " HorizontalAlignment="Left"></Label>
+            <TextBox Name ="comment" Text="{Binding Comment}" HorizontalContentAlignment="Left" Height="50" Width="250" Background="#e0e2e4" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"></TextBox>
+            <Button Width="100" Height="20" Margin="0 10 0 0" Content="Save" Command="{Binding SaveDoctorSurveyCommand}"/>
+        </StackPanel>
+    </Border>
+</Window>

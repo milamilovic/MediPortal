@@ -1,0 +1,23 @@
+[
+  {
+    "PatientId": 1,
+    "DoctorId": 2,
+    "Date": null,
+    "Description": "aaa",
+    "WasUsed": false
+  },
+  {
+    "PatientId": 1,
+    "DoctorId": 3,
+    "Date": null,
+    "Description": "b",
+    "WasUsed": false
+  },
+  {
+    "PatientId": 1,
+    "DoctorId": 1,
+    "Date": null,
+    "Description": "aa",
+    "WasUsed": false
+  }
+]

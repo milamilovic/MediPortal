@@ -1,0 +1,39 @@
+﻿<Window x:Class="ZdravoCorp.HealthInstitution.GUI.PatientWindows.OtherReminderCRUD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.HealthInstitution.GUI.PatientWindows"
+        mc:Ignorable="d"
+        Title="Personal reminder" Height="380" Width="400" Background="#625750">
+    <Border Height="300" Width="290" Grid.Column="1">
+        <StackPanel  Height="300" Width="290" Background="#c6bcb6">
+            <WrapPanel>
+                <Label Content="Name"  Margin="15 15 5 5"></Label>
+                <TextBox Name="nameBox" Width="120" Margin="70 15 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Description"  Margin="15 5 5 5"></Label>
+                <TextBox Name="descriptionBox" Width="120" Margin="42 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Start date"  Margin="15 5 5 5" ></Label>
+                <DatePicker Width="120" Name="pickDate" Margin="52, 5, 5, 5" Background="#e0e2e4"></DatePicker>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Days"  Margin="15 5 5 5"></Label>
+                <TextBox Name="daysBox" Width="120" Margin="79 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Times per day"  Margin="15 5 5 5"  ></Label>
+                <TextBox Name="timesBox" Width="120" Margin="31 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Timer"  Margin="15 5 5 5" ></Label>
+                <TextBox x:Name="timerBox" Width="120" Margin="75 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <Button Name="createButton" Width="150" Margin="5 15 0 0" Click="CreateButtonClick" Content="Create reminder"></Button>
+            <Button Name="updateButton" Width="150" Margin="5 5 0 0" Click="UpdateButtonClick" Content="Update reminder"></Button>
+        </StackPanel>
+    </Border>
+</Window>

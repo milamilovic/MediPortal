@@ -1,0 +1,388 @@
+<Window x:Class="ZdravoCorp.HealthInstitution.GUI.ManagerMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.HealthInstitution.GUI"
+        mc:Ignorable="d"
+        Title="ManagerMainWindow" Height="600" Width="800">
+    <StackPanel Background="#96897f">
+        <StackPanel Width="720" Height="500" Background="#c6bcb6" Margin="0, 40, 0, 0">
+            <TabControl Background="#625750">
+                <TabItem Header="General">
+                    <StackPanel  Height="500" Width="720">
+                        <TextBlock Height="260" Width="720">
+                            <TextBox Name="Profile" Height="230" Width="170" Margin="70, 30, 0, 0" Background="#000000" >
+                            </TextBox>
+                            <StackPanel Height="500" Width="350" Margin="70, 0, 0, 0">
+                                <Label Name="username" FontSize="17" Margin="0, 30, 0, 0">Username:</Label>
+                                <Label Name="password" FontSize="17">Password:</Label>
+                                <Label Name="name" FontSize="17">Name:</Label>
+                                <Label Name="surname" FontSize="17">Surname:</Label>
+                                <Label Name="birthday" FontSize="17">Birthday:</Label>
+                                <Label Name="role" FontSize="17">Role:</Label>
+                                <Label Name="email" FontSize="17">Email:</Label>
+                            </StackPanel>
+                        </TextBlock>
+                        <Button Height="40" Width="120" Margin="80" Background="#e0e2e4" FontSize="17" Click="LogOutClick">Log Out</Button>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Equipment">
+                    <ScrollViewer VerticalScrollBarVisibility="Visible" MaxHeight="18000" Height="474" Margin="18,0,1,0">
+                        <StackPanel  Height="Auto" Width="720">
+                            <WrapPanel>
+                                <Label Margin="5" FontSize="15">Filter By Room Type:</Label>
+                                <ComboBox Width="200" Margin="255, 10, 20, 5" SelectedValue="">
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterRoomOperating" IsChecked="False">Operating Room</CheckBox>
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterRoomPatientCare" IsChecked="False">Patient Care Room</CheckBox>
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterRoomConsulting" IsChecked="False">Consulting Room</CheckBox>
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterRoomWaiting" IsChecked="False">Waiting Room</CheckBox>
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterRoomWarehouse" IsChecked="False">Warehouse</CheckBox>
+                                    </ComboBoxItem>
+                                </ComboBox>
+                            </WrapPanel>
+
+                            <WrapPanel>
+                                <Label Margin="5" FontSize="15">Filter By Equipment Type:</Label>
+                                <ComboBox Width="200" Margin="222, 10, 20, 5" SelectedValue="">
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterEquipmentTypeStatic" IsChecked="False">Static</CheckBox>
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterEquipmentTypeDynamic" IsChecked="False">Dynamic</CheckBox>
+                                    </ComboBoxItem>
+                                </ComboBox>
+                            </WrapPanel>
+                            <WrapPanel>
+                                <Label Margin="5" FontSize="15">Filter By Quantity:</Label>
+                                <ComboBox Width="200" Margin="272, 10, 20, 5" SelectedValue="">
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterQuantityZero" IsChecked="False">0</CheckBox>
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterByQuantityUpToTen" IsChecked="False">1-10</CheckBox>
+                                    </ComboBoxItem>
+                                    <ComboBoxItem Background="#e0e2e4">
+                                        <CheckBox Name="FilterByQuantityMoreThanTen" IsChecked="False">10+</CheckBox>
+                                    </ComboBoxItem>
+                                </ComboBox>
+                                <Button Name="ApplyFilter" Click="ApplyFilters" Height="25" Width="100" Margin="20, 5, 0, 0">Apply Filters</Button>
+                            </WrapPanel>
+
+                            <WrapPanel>
+                                <Label Margin="5" FontSize="15">Search (Name, Type, Room Type, Equipment category):</Label>
+                                <TextBox Name="SearchTextBox" Height="25" Width="200" Background="#e0e2e4" Margin="30, 5, 0, 5"></TextBox>
+                                <Button Width="100" Height="25" Click="ApplySearch" Margin="20, 0" FontSize="13">Search!</Button>
+                            </WrapPanel>
+                            <FlowDocumentScrollViewer Height ="Auto" Width="700" Margin="0, 15">
+                                <FlowDocumentScrollViewer.Resources>
+                                    <Style TargetType="{x:Type TableCell}">
+                                        <Setter Property="TextAlignment" Value="Center"/>
+                                    </Style>
+                                </FlowDocumentScrollViewer.Resources>
+                                <FlowDocument>
+                                    <Table TextAlignment="Center" Background="#c6bcb6" CellSpacing="0" Margin="0" x:Name="EquipmentTableXaml" BorderThickness="1" BorderBrush="Black">
+                                        <Table.Columns>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                        </Table.Columns>
+                                        <TableRowGroup>
+                                            <TableRow>
+                                                <TableCell BorderBrush="Black" BorderThickness="1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Equipment name"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Room id"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Room Type"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Equipment Type"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Equipment category"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Quantity"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                            </TableRow>
+                                        </TableRowGroup>
+                                        <TableRowGroup></TableRowGroup>
+                                    </Table>
+                                </FlowDocument>
+                            </FlowDocumentScrollViewer>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Order items">
+                    <ScrollViewer VerticalScrollBarVisibility="Visible" MaxHeight="18000" Height="474" Margin="18,0,1,0">
+                        <StackPanel  Height="Auto" Width="720">
+                            <WrapPanel>
+                                <ComboBox Width="150" Margin="20" Name="OrderEquipmentTypeComboBox">
+                                </ComboBox>
+                                <Label Margin="0, 20, 10, 0">Quantity:</Label>
+                                <TextBox Name="equipmentOrderQuantity" Height="20" Width="40"></TextBox>
+                                <Button Width="100" Height="25" Click="OrderClick" Margin="20, 0" FontSize="13">Order</Button>
+                            </WrapPanel>
+                            <FlowDocumentScrollViewer Height ="Auto" Width="700" Margin="0, 15">
+                                <FlowDocumentScrollViewer.Resources>
+                                    <Style TargetType="{x:Type TableCell}">
+                                        <Setter Property="TextAlignment" Value="Center"/>
+                                    </Style>
+                                </FlowDocumentScrollViewer.Resources>
+                                <FlowDocument>
+                                    <Table TextAlignment="Center"  Background="#c6bcb6" CellSpacing="0" Margin="0" x:Name="EquipmentOrderingTable" BorderThickness="1" BorderBrush="Black">
+                                        <Table.Columns>
+                                            <TableColumn Width="250"/>
+                                            <TableColumn Width="250"/>
+                                        </Table.Columns>
+                                        <TableRowGroup>
+                                            <TableRow>
+                                                <TableCell BorderBrush="Black" BorderThickness="1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Equipment name"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Quantity"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                            </TableRow>
+                                        </TableRowGroup>
+                                        <TableRowGroup></TableRowGroup>
+                                    </Table>
+                                </FlowDocument>
+                            </FlowDocumentScrollViewer>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Moving Equipment">
+                    <ScrollViewer VerticalScrollBarVisibility="Visible" MaxHeight="18000" Height="474" Margin="18,0,1,0">
+                        <StackPanel  Height="Auto" Width="720">
+                            <WrapPanel>
+                                <ComboBox SelectionChanged="MovingEquipmentSelectionChanged" Name="MovingSelectEquipmentCombo" Width="100" Margin="0, 20" SelectedValue="-1">
+                                </ComboBox>
+                                <Label Margin="0, 20, 0, 0">From:</Label>
+                                <ComboBox Name="FromRoomCombo" Width="50" Margin="5, 20, 5, 20" SelectedValue="-1">
+                                </ComboBox>
+                                <Label Margin="0, 20, 0, 0">To:</Label>
+                                <ComboBox Name="ToRoomCombo" Width="50" Margin="5, 20, 5, 20" SelectedValue="-1">
+                                </ComboBox>
+                                <Label Margin="0, 20, 0, 0">Quantity:</Label>
+                                <TextBox Name="equipmentMoveQuantity" Height="20" Width="40"></TextBox>
+                                <DatePicker Name="MoveDatePicker" Margin="20" IsHitTestVisible="False"></DatePicker>
+                                <TextBox Name="MoveTimePicker" Height="20" Width="50" Margin="0, 0, 10, 0" IsReadOnly="True">hh:mm</TextBox>
+                                <Button Width="80" Height="25" Click="MoveClick" Margin="0, 0" FontSize="13">Move</Button>
+                            </WrapPanel>
+                            <FlowDocumentScrollViewer Height ="Auto" Width="700" Margin="0, 15">
+                                <FlowDocumentScrollViewer.Resources>
+                                    <Style TargetType="{x:Type TableCell}">
+                                        <Setter Property="TextAlignment" Value="Center"/>
+                                    </Style>
+                                </FlowDocumentScrollViewer.Resources>
+                                <FlowDocument>
+                                    <Table TextAlignment="Center" Background="#c6bcb6" CellSpacing="0" Margin="0" x:Name="EquipmentMoveTable" BorderThickness="1" BorderBrush="Black">
+                                        <Table.Columns>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                            <TableColumn Width="100"/>
+                                        </Table.Columns>
+                                        <TableRowGroup>
+                                            <TableRow>
+                                                <TableCell BorderBrush="Black" BorderThickness="1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Equipment name"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Room id"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Room Type"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Quantity"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="To be moved"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="To arrive"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                            </TableRow>
+                                        </TableRowGroup>
+                                        <TableRowGroup></TableRowGroup>
+                                    </Table>
+                                </FlowDocument>
+                            </FlowDocumentScrollViewer>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Simple renovation">
+                    <ScrollViewer VerticalScrollBarVisibility="Visible" MaxHeight="18000" Height="474" Margin="18,0,1,0">
+                        <StackPanel  Height="Auto" Width="720">
+                            <WrapPanel>
+                                <ComboBox Width="150" Margin="20" Name="RoomRenovationIdCombo" SelectedItem="-1">
+                                </ComboBox>
+                                <Label Margin="5, 20, 0, 10">From:</Label>
+                                <DatePicker Name="SimpleRenovationFromDate" Margin="10, 20"></DatePicker>
+                                <Label Margin="5, 20, 0, 10">To:</Label>
+                                <DatePicker Name="SimpleRenovationToDate" Margin="10, 20"></DatePicker>
+                                <Button Width="100" Height="25" Click="RenovationClick" Margin="20, 0" FontSize="13">Renovate!</Button>
+                            </WrapPanel>
+                            <FlowDocumentScrollViewer Height ="Auto" Width="700" Margin="70, 15">
+                                <FlowDocumentScrollViewer.Resources>
+                                    <Style TargetType="{x:Type TableCell}">
+                                        <Setter Property="TextAlignment" Value="Center"/>
+                                    </Style>
+                                </FlowDocumentScrollViewer.Resources>
+                                <FlowDocument>
+                                    <Table TextAlignment="Center"  Background="#c6bcb6" CellSpacing="0" Margin="0" x:Name="SimpleRenovationTable" BorderThickness="1" BorderBrush="Black">
+                                        <Table.Columns>
+                                            <TableColumn Width="250"/>
+                                            <TableColumn Width="250"/>
+                                        </Table.Columns>
+                                        <TableRowGroup>
+                                            <TableRow>
+                                                <TableCell BorderBrush="Black" BorderThickness="1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Room id"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Room type"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                            </TableRow>
+                                        </TableRowGroup>
+                                        <TableRowGroup></TableRowGroup>
+                                    </Table>
+                                </FlowDocument>
+                            </FlowDocumentScrollViewer>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Complex renovation">
+                    <ScrollViewer VerticalScrollBarVisibility="Visible" MaxHeight="18000" Height="474" Margin="18,0,1,0">
+                        <StackPanel  Height="Auto" Width="720">
+                            <Label Margin="5, 20, 0, 0" >If you don't want to keep the equipment in the resulting room, equipment will be moved to the warehouse.</Label>
+                            <Label Margin="5, 5, 0, 0" >The resulting room will take the id of the first room</Label>
+                            <WrapPanel>
+                                <ComboBox Width="50" Margin="20" Name="FirstRoomRenovationCombo">
+                                </ComboBox>
+                                <ComboBox Width="50" Margin="20" Name="SecondRoomRenovationCombo">
+                                </ComboBox>
+                                <Label Margin="5, 20, 0, 10">From:</Label>
+                                <DatePicker Name="ComplexRenovationFromDate" Margin="10, 20"></DatePicker>
+                                <Label Margin="5, 20, 0, 10">To:</Label>
+                                <DatePicker Name="ComplexRenovationToDate" Margin="10, 20"></DatePicker>
+                                <CheckBox Margin="5, 27" Name="CombiningRoomsCheckBox">Keep equipment in room</CheckBox>
+                                <ComboBox Width="150" Margin="20" Name="ComplexRenovationCombiningRoomType"></ComboBox>
+                                <Button Width="100" Height="25" Click="RenovationCombineClick" Margin="20, 0" FontSize="13">Combine Rooms!</Button>
+                            </WrapPanel>
+                            <Label></Label>
+                            <Label></Label>
+                            <Label></Label>
+                            <Label></Label>
+                            <Label Margin="5, 20, 0, 0">If you want to keep equipment in the rooms, it will be moved to</Label>
+                            <Label>the first room after the renovations are over.</Label>
+                            <Label>New room type is inherited.</Label>
+                            <WrapPanel>
+                                <ComboBox Width="150" Margin="20" Name="RoomSplitCombo">
+                                </ComboBox>
+                                <Label Margin="0, 20, 0, 10">From:</Label>
+                                <DatePicker Name="ComplexRenovationSplitFromDate" Margin="5, 20"></DatePicker>
+                                <Label Margin="10, 20, 0, 10">To:</Label>
+                                <DatePicker Name="ComplexRenovationSplitToDate" Margin="5, 20"></DatePicker>
+                                <CheckBox Margin="10, 27" Name="SplitigRoomsCheckbox">Keep equipment in rooms</CheckBox>
+                                <Button Width="100" Height="25" Click="RenovationSplitClick" Margin="20, 0" FontSize="13">Split Room!</Button>
+                            </WrapPanel>
+                            <FlowDocumentScrollViewer Height ="Auto" Width="700" Margin="70, 15">
+                                <FlowDocumentScrollViewer.Resources>
+                                    <Style TargetType="{x:Type TableCell}">
+                                        <Setter Property="TextAlignment" Value="Center"/>
+                                    </Style>
+                                </FlowDocumentScrollViewer.Resources>
+                                <FlowDocument>
+                                    <Table TextAlignment="Center"  Background="#c6bcb6" CellSpacing="0" Margin="0" x:Name="ComplexRenovationTable" BorderThickness="1" BorderBrush="Black">
+                                        <Table.Columns>
+                                            <TableColumn Width="250"/>
+                                            <TableColumn Width="250"/>
+                                        </Table.Columns>
+                                        <TableRowGroup>
+                                            <TableRow>
+                                                <TableCell BorderBrush="Black" BorderThickness="1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Room id"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                                <TableCell BorderBrush="Black" BorderThickness="0,1,1,1">
+                                                    <Paragraph FontWeight="Bold">
+                                                        <Run Text="Room type"/>
+                                                    </Paragraph>
+                                                </TableCell>
+                                            </TableRow>
+                                        </TableRowGroup>
+                                        <TableRowGroup></TableRowGroup>
+                                    </Table>
+                                </FlowDocument>
+                            </FlowDocumentScrollViewer>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <TabItem Header="Review schedule" HorizontalAlignment="Center" Width="98" Height="20" VerticalAlignment="Top">
+                    <StackPanel  Height="500" Width="720">
+                        <Button Height="40" Width="200" Margin="80" Background="#e0e2e4" FontSize="17"  Click="DaysOffButton" >Review days off requests</Button>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Analytics">
+                    <StackPanel  Height="500" Width="720">
+                        <Button Height="40" Width="200" Margin="80, 80, 80, 0" Background="#e0e2e4" FontSize="17"  Click="HospitalButtonClick" >Hospital analytics</Button>
+                        <Button Height="40" Width="200" Margin="80" Background="#e0e2e4" FontSize="17"  Click="DoctorButtonClick" >Doctor analytics</Button>
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </StackPanel>
+</Window>

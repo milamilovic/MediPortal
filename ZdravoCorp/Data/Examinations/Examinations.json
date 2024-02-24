@@ -1,0 +1,98 @@
+[
+  {
+    "Id": 1,
+    "IsOperation": false,
+    "PatientId": 1,
+    "DoctorId": 1,
+    "TimeSlot": {
+      "Date": "05.05.2023.",
+      "StartTime": "12:00:00",
+      "Duration": "00:15:00"
+    },
+    "State": "updated"
+  },
+  {
+    "Id": 2,
+    "IsOperation": false,
+    "PatientId": 1,
+    "DoctorId": 1,
+    "TimeSlot": {
+      "Date": "25.05.2023.",
+      "StartTime": "13:00:00",
+      "Duration": "00:15:00"
+    },
+    "State": "updated"
+  },
+  {
+    "Id": 3,
+    "IsOperation": false,
+    "PatientId": 1,
+    "DoctorId": 3,
+    "TimeSlot": {
+      "Date": "12.06.2023.",
+      "StartTime": "10:00:00",
+      "Duration": "00:15:00"
+    },
+    "State": "created"
+  },
+  {
+    "Id": 829374,
+    "IsOperation": true,
+    "PatientId": 2,
+    "DoctorId": 2,
+    "TimeSlot": {
+      "Date": "24.05.2023.",
+      "StartTime": "20:01:50",
+      "Duration": "00:15:00"
+    },
+    "State": "created"
+  },
+  {
+    "Id": 1378765803,
+    "IsOperation": false,
+    "PatientId": 1,
+    "DoctorId": 1,
+    "TimeSlot": {
+      "Date": "29.06.2023.",
+      "StartTime": "00:00:00",
+      "Duration": "00:15:00"
+    },
+    "State": "created"
+  },
+  {
+    "Id": 1465583843,
+    "IsOperation": false,
+    "PatientId": 1,
+    "DoctorId": 1,
+    "TimeSlot": {
+      "Date": "29.06.2023.",
+      "StartTime": "00:15:00",
+      "Duration": "00:15:00"
+    },
+    "State": "created"
+  },
+  {
+    "Id": 1251536940,
+    "IsOperation": false,
+    "PatientId": 1,
+    "DoctorId": 1,
+    "TimeSlot": {
+      "Date": "29.06.2023.",
+      "StartTime": "00:30:00",
+      "Duration": "00:15:00"
+    },
+    "State": "created"
+  },
+  {
+    "Id": 1866115939,
+    "IsOperation": false,
+    "PatientId": 2,
+    "DoctorId": 1,
+    "TimeSlot": {
+      "Date": "29.06.2023.",
+      "StartTime": "00:45:00",
+      "Duration": "00:15:00"
+    },
+    "State": "created"
+  }
+]

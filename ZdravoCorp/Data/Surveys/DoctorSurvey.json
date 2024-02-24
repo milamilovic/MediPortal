@@ -1,0 +1,77 @@
+[
+  {
+    "DoctorId": 3,
+    "Id": 0,
+    "PatientId": 1,
+    "Date": "13.06.2023.",
+    "Questions": [
+      "Doctor service quality: ",
+      "How likely are you to recommend the doctors services to a friend?"
+    ],
+    "Answers": [
+      5,
+      5
+    ],
+    "Comment": "I am very satisfied! Thanks"
+  },
+  {
+    "DoctorId": 2,
+    "Id": 0,
+    "PatientId": 2,
+    "Date": "13.06.2023.",
+    "Questions": [
+      "Doctor service quality: ",
+      "How likely are you to recommend the doctors services to a friend?"
+    ],
+    "Answers": [
+      5,
+      4
+    ],
+    "Comment": "Happy about this survey!!"
+  },
+  {
+    "DoctorId": 1,
+    "Id": 0,
+    "PatientId": 1,
+    "Date": "14.06.2023.",
+    "Questions": [
+      "Doctor service quality: ",
+      "How likely are you to recommend the doctors services to a friend?"
+    ],
+    "Answers": [
+      5,
+      5
+    ],
+    "Comment": "Excellent doc!"
+  },
+  {
+    "DoctorId": 1,
+    "Id": 0,
+    "PatientId": 1,
+    "Date": "14.06.2023.",
+    "Questions": [
+      "Doctor service quality: ",
+      "How likely are you to recommend the doctors services to a friend?"
+    ],
+    "Answers": [
+      1,
+      1
+    ],
+    "Comment": "I don\u0027t like this doc!"
+  },
+  {
+    "DoctorId": 1,
+    "Id": 1164424065,
+    "PatientId": 1,
+    "Date": "16.06.2023.",
+    "Questions": [
+      "Doctor service quality: ",
+      "How likely are you to recommend the doctors services to a friend?"
+    ],
+    "Answers": [
+      5,
+      5
+    ],
+    "Comment": "hahhs"
+  }
+]

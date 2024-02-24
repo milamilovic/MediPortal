@@ -1,0 +1,283 @@
+[
+  {
+    "Sender": {
+      "Username": "doctor1",
+      "Password": "doctor1",
+      "role": 0
+    },
+    "Recipient": {
+      "Username": "nurse1",
+      "Password": "nurse1",
+      "role": 1
+    },
+    "Messages": [
+      {
+        "Content": "Dolazim",
+        "Sender": {
+          "Username": "nurse1",
+          "Password": "nurse1",
+          "role": 1
+        },
+        "DateAndTime": "12.06.2023. 11:00:00"
+      },
+      {
+        "Content": "Samo da odem u posetu.",
+        "Sender": {
+          "Username": "nurse1",
+          "Password": "nurse1",
+          "role": 1
+        },
+        "DateAndTime": "12.06.2023. 11:00:34"
+      },
+      {
+        "Content": "Okej cekam te",
+        "Sender": {
+          "Username": "doctor1",
+          "Password": "doctor1",
+          "role": 0
+        },
+        "DateAndTime": "12.06.2023. 11:00:00"
+      },
+      {
+        "Content": "onda da ja dodjem",
+        "Sender": {
+          "Username": "doctor1",
+          "Password": "doctor1",
+          "role": 0
+        },
+        "DateAndTime": "14.06.2023. 11:26:18"
+      },
+      {
+        "Content": "mozes",
+        "Sender": {
+          "Username": "nurse1",
+          "Password": "nurse1",
+          "role": 1
+        },
+        "DateAndTime": "14.06.2023. 11:39:56"
+      },
+      {
+        "Content": "gde siii?",
+        "Sender": {
+          "Username": "nurse1",
+          "Password": "nurse1",
+          "role": 1
+        },
+        "DateAndTime": "14.06.2023. 15:44:28"
+      },
+      {
+        "Content": "ggshsh",
+        "Sender": {
+          "Username": "doctor1",
+          "Password": "doctor1",
+          "role": 0
+        },
+        "DateAndTime": "16.06.2023. 09:38:08"
+      },
+      {
+        "Content": "cncn",
+        "Sender": {
+          "Username": "doctor1",
+          "Password": "doctor1",
+          "role": 0
+        },
+        "DateAndTime": "16.06.2023. 09:38:13"
+      }
+    ],
+    "LastMessage": {
+      "Content": "cncn",
+      "Sender": {
+        "Username": "doctor1",
+        "Password": "doctor1",
+        "role": 0
+      },
+      "DateAndTime": "16.06.2023. 09:38:13"
+    }
+  },
+  {
+    "Sender": {
+      "Username": "doctor1",
+      "Password": "doctor1",
+      "role": 0
+    },
+    "Recipient": {
+      "Username": "nurse2",
+      "Password": "nurse2",
+      "role": 1
+    },
+    "Messages": [],
+    "LastMessage": {
+      "Content": null,
+      "Sender": null,
+      "DateAndTime": null
+    }
+  },
+  {
+    "Sender": {
+      "Username": "doctor2",
+      "Password": "doctor2",
+      "role": 0
+    },
+    "Recipient": {
+      "Username": "nurse1",
+      "Password": "nurse1",
+      "role": 1
+    },
+    "Messages": [
+      {
+        "Content": "moze pomoc?",
+        "Sender": {
+          "Username": "doctor2",
+          "Password": "doctor2",
+          "role": 0
+        },
+        "DateAndTime": "14.06.2023. 13:16:37"
+      },
+      {
+        "Content": "naravno, stizem!",
+        "Sender": {
+          "Username": "nurse1",
+          "Password": "nurse1",
+          "role": 1
+        },
+        "DateAndTime": "14.06.2023. 14:12:30"
+      },
+      {
+        "Content": "HVALA",
+        "Sender": {
+          "Username": "doctor2",
+          "Password": "doctor2",
+          "role": 0
+        },
+        "DateAndTime": "14.06.2023. 14:13:11"
+      },
+      {
+        "Content": "kakva je situacija na spratu?",
+        "Sender": {
+          "Username": "doctor2",
+          "Password": "doctor2",
+          "role": 0
+        },
+        "DateAndTime": "14.06.2023. 19:53:00"
+      }
+    ],
+    "LastMessage": {
+      "Content": "kakva je situacija na spratu?",
+      "Sender": {
+        "Username": "doctor2",
+        "Password": "doctor2",
+        "role": 0
+      },
+      "DateAndTime": "14.06.2023. 19:53:00"
+    }
+  },
+  {
+    "Sender": {
+      "Username": "doctor2",
+      "Password": "doctor2",
+      "role": 0
+    },
+    "Recipient": {
+      "Username": "nurse2",
+      "Password": "nurse2",
+      "role": 1
+    },
+    "Messages": [
+      {
+        "Content": "jos koliko pacijenata ima na bolnickom lecenju?",
+        "Sender": {
+          "Username": "doctor2",
+          "Password": "doctor2",
+          "role": 0
+        },
+        "DateAndTime": "14.06.2023. 17:10:55"
+      },
+      {
+        "Content": "28 je bilo jutros.",
+        "Sender": {
+          "Username": "nurse2",
+          "Password": "nurse2",
+          "role": 1
+        },
+        "DateAndTime": "14.06.2023. 17:13:31"
+      },
+      {
+        "Content": "hvala",
+        "Sender": {
+          "Username": "doctor2",
+          "Password": "doctor2",
+          "role": 0
+        },
+        "DateAndTime": "14.06.2023. 17:19:12"
+      },
+      {
+        "Content": "nema na cemu!",
+        "Sender": {
+          "Username": "nurse2",
+          "Password": "nurse2",
+          "role": 1
+        },
+        "DateAndTime": "14.06.2023. 17:55:59"
+      }
+    ],
+    "LastMessage": {
+      "Content": "nema na cemu!",
+      "Sender": {
+        "Username": "nurse2",
+        "Password": "nurse2",
+        "role": 1
+      },
+      "DateAndTime": "14.06.2023. 17:55:59"
+    }
+  },
+  {
+    "Sender": {
+      "Username": "doctor3",
+      "Password": "doctor3",
+      "role": 0
+    },
+    "Recipient": {
+      "Username": "nurse1",
+      "Password": "nurse1",
+      "role": 1
+    },
+    "Messages": [
+      {
+        "Content": "kada idete na odmor?",
+        "Sender": {
+          "Username": "nurse1",
+          "Password": "nurse1",
+          "role": 1
+        },
+        "DateAndTime": "14.06.2023. 19:53:52"
+      }
+    ],
+    "LastMessage": {
+      "Content": "kada idete na odmor?",
+      "Sender": {
+        "Username": "nurse1",
+        "Password": "nurse1",
+        "role": 1
+      },
+      "DateAndTime": "14.06.2023. 19:53:52"
+    }
+  },
+  {
+    "Sender": {
+      "Username": "doctor3",
+      "Password": "doctor3",
+      "role": 0
+    },
+    "Recipient": {
+      "Username": "nurse2",
+      "Password": "nurse2",
+      "role": 1
+    },
+    "Messages": [],
+    "LastMessage": {
+      "Content": null,
+      "Sender": null,
+      "DateAndTime": null
+    }
+  }
+]

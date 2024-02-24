@@ -1,0 +1,110 @@
+[
+  {
+    "Id": 839872,
+    "PatientId": 1,
+    "Date": "13.6.2023.",
+    "Questions": [
+      "Hospital service quality: ",
+      "Cleanliness in the hospital: ",
+      "How do you like our services? ",
+      "How likely it is that you would recommend our services to a friend?"
+    ],
+    "Answers": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "Comment": ""
+  },
+  {
+    "Id": 1380300426,
+    "PatientId": 2,
+    "Date": "13.6.2023.",
+    "Questions": [
+      "Hospital service quality: ",
+      "Cleanliness in the hospital: ",
+      "How do you like our services? ",
+      "How likely it is that you would recommend our services to a friend?"
+    ],
+    "Answers": [
+      5,
+      4,
+      5,
+      5
+    ],
+    "Comment": "amazing hospital!!!"
+  },
+  {
+    "Id": 1765591927,
+    "PatientId": 1,
+    "Date": "13.06.2023.",
+    "Questions": [
+      "Hospital service quality: ",
+      "Cleanliness in the hospital: ",
+      "How do you like our services? ",
+      "How likely it is that you would recommend our services to a friend?"
+    ],
+    "Answers": [
+      5,
+      4,
+      3,
+      2
+    ],
+    "Comment": "andra"
+  },
+  {
+    "Id": 1224013822,
+    "PatientId": 1,
+    "Date": "13.06.2023.",
+    "Questions": [
+      "Hospital service quality: ",
+      "Cleanliness in the hospital: ",
+      "How do you like our services? ",
+      "How likely it is that you would recommend our services to a friend?"
+    ],
+    "Answers": [
+      4,
+      3,
+      4,
+      5
+    ],
+    "Comment": "I would like if it can be cleaner."
+  },
+  {
+    "Id": 1977803464,
+    "PatientId": 1,
+    "Date": "14.06.2023.",
+    "Questions": [
+      "Hospital service quality: ",
+      "Cleanliness in the hospital: ",
+      "How do you like our services? ",
+      "How likely are you to recommend our services to a friend?"
+    ],
+    "Answers": [
+      5,
+      5,
+      5,
+      5
+    ],
+    "Comment": "Nice"
+  },
+  {
+    "Id": 1248096581,
+    "PatientId": 1,
+    "Date": "16.06.2023.",
+    "Questions": [
+      "Hospital service quality: ",
+      "Cleanliness in the hospital: ",
+      "How do you like our services? ",
+      "How likely are you to recommend our services to a friend?"
+    ],
+    "Answers": [
+      5,
+      5,
+      5,
+      5
+    ],
+    "Comment": "hsahhsa"
+  }
+]

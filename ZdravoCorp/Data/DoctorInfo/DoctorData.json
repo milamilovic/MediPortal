@@ -1,0 +1,130 @@
+[
+  {
+    "Rates": [
+      5,
+      4,
+      5,
+      5,
+      5,
+      5,
+      1,
+      1,
+      5,
+      5
+    ],
+    "BusyTimeSlots": [
+      {
+        "Date": "05.05.2023.",
+        "StartTime": "12:00:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "21.04.2023.",
+        "StartTime": "15:15:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "25.05.2023.",
+        "StartTime": "13:00:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "01.06.2023.",
+        "StartTime": "10:00:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "09.05.2023.",
+        "StartTime": "23:39:24",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "10.05.2023.",
+        "StartTime": "12:00:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "23.06.2023.",
+        "StartTime": "00:00:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "29.06.2023.",
+        "StartTime": "00:00:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "29.06.2023.",
+        "StartTime": "00:15:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "29.06.2023.",
+        "StartTime": "00:30:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "29.06.2023.",
+        "StartTime": "00:45:00",
+        "Duration": "00:15:00"
+      }
+    ],
+    "Username": "doctor1",
+    "Password": "doctor1",
+    "Id": 1,
+    "Speciality": 1,
+    "Name": "Marko",
+    "Surname": "Markovic",
+    "AverageRate": 4.1
+  },
+  {
+    "Rates": [
+      5,
+      2,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      4
+    ],
+    "BusyTimeSlots": [
+      {
+        "Date": "12.05.2023.",
+        "StartTime": "12:00:00",
+        "Duration": "00:15:00"
+      },
+      {
+        "Date": "24.05.2023.",
+        "StartTime": "20:01:50",
+        "Duration": "00:15:00"
+      }
+    ],
+    "Username": "doctor2",
+    "Password": "doctor2",
+    "Id": 2,
+    "Speciality": 0,
+    "Name": "Petar",
+    "Surname": "Petrovic",
+    "AverageRate": 4.0
+  },
+  {
+    "Rates": [
+      5,
+      5,
+      5,
+      1,
+      5,
+      5
+    ],
+    "BusyTimeSlots": [],
+    "Username": "doctor3",
+    "Password": "doctor3",
+    "Id": 3,
+    "Speciality": 2,
+    "Name": "Marija",
+    "Surname": "Savic",
+    "AverageRate": 4.33
+  }
+]

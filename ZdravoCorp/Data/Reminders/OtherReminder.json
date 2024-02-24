@@ -1,0 +1,11 @@
+[
+  {
+    "PatientId": 1,
+    "Timer": 5,
+    "Name": "Create examination",
+    "Description": "Doctor 1 at 12:00:00",
+    "StartDate": "29.05.2023.",
+    "Days": 2,
+    "Times": 24
+  }
+]

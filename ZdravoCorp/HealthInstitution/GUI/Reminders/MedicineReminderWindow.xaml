@@ -1,0 +1,39 @@
+﻿<Window x:Class="ZdravoCorp.HealthInstitution.GUI.PatientWindows.MedicineReminderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.HealthInstitution.GUI.PatientWindows"
+        mc:Ignorable="d"
+        Title="Medicine reminder" Height="380" Width="400" Background="#625750">
+    <Border Height="300" Width="290" Grid.Column="1">
+        <StackPanel  Height="300" Width="290" Background="#c6bcb6">
+            <WrapPanel  HorizontalAlignment="Center">
+                <Label Content="Medicine" Margin="0 10 0 5" Name="medTitle"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Start date"  Margin="15 5 5 5"></Label>
+                <TextBox Name="dateBox" Width="120" Margin="50 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Days"  Margin="15 5 5 5"></Label>
+                <TextBox Name="daysBox" Width="120" Margin="76 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Schedule"  Margin="15 5 5 5"></Label>
+                <TextBox Name="scheduleBox" Width="120" Margin="55 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Meals"  Margin="15 5 5 5"></Label>
+                <TextBox Name="mealsBox" Width="120" Margin="71 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Reminder time"  Margin="15 5 5 5"></Label>
+                <TextBox Name="timeBox" Width="120" Margin="25 5 5 5" Height="23" Background="#e0e2e4"/>
+            </WrapPanel>
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Width="100" Height="30" Margin="0 20 0 0" Content="Save" Click="SaveReminderClick"/>
+            </WrapPanel>
+        </StackPanel>
+    </Border>
+</Window>
